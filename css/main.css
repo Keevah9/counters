@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    font-family: 'poppins', sans-serif;
+    color: whitesmoke;
+}
+
+/* container */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container h2 {
+    font-size: 70px;
+}
+
+span {
+    font-size: 60px;
+    margin: 40px 0;
+}
+
+.buttons {
+    filter: url('#goo');
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+.btn {
+    text-align: center;
+    background: #eee;
+    color: black;
+    font-weight: bold;
+    padding: 1.18em 1.32em 1.03em;
+    line-height: 1;
+    border-radius: 1.4em;
+    position: relative;
+    min-width: 8.23em;
+    text-decoration: none;
+    font-size: 1.25rem;
+    margin-left: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:before,
+.btn:after {
+    width: 4.4em;
+    height: 2.90em;
+    position: absolute;
+    content: "";
+    display: inline-block;
+    background: #eee;
+    border-radius: 50%;
+    transition: transform 1s ease;
+    transform: scale(0);
+    z-index: -1;
+}
+
+.btn:before {
+    top: -25%;
+    left: 20%;
+}
+
+.btn:after {
+    bottom: -25%;
+    right: 20%;
+}
+
+.btn:hover {
+    color: grey;
+}
+
+.btn:hover:before,
+.btn:hover:after {
+    transform: none;
+}
+
+@media screen and (max-width:1076px) {
+    .buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* needed!!! but i love the design better without it here */
+    .btn {
+        margin-top: 10px;
+    }
+}
